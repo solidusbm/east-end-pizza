@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Reserve a Table | East End Pizza Co.</title>
+<meta name="description" content="Request a table at East End Pizza Co. in Kerrville, TX. We'll confirm your reservation by phone or email.">
+<link rel="icon" href="assets/img/logo.jpg">
+<link rel="apple-touch-icon" href="assets/img/logo.jpg">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="announce">
+  🍕 We're now open Sundays until 8 PM — drive-thru window open for pickup &amp; delivery! &nbsp;·&nbsp;
+  <a href="https://www.toasttab.com/east-end-pizza-company-1700-water-street" target="_blank" rel="noopener">Order online</a>
+</div>
+
+<header class="site-header">
+  <div class="container">
+    <a href="index.html" class="brand">
+      <img src="assets/img/logo.jpg" alt="East End Pizza Co. logo">
+      <span class="brand-text">East End Pizza Co.<span>Brick Oven &middot; Kerrville, TX</span></span>
+    </a>
+
+    <nav class="nav-links" id="navLinks">
+      <a href="index.html#about">Our Story</a>
+      <a href="index.html#menu">Menu</a>
+      <a href="index.html#reviews">Reviews</a>
+      <a href="index.html#location">Hours &amp; Location</a>
+      <a href="reservations.html" class="nav-reserve-mobile">Reserve a Table</a>
+    </nav>
+
+    <div class="nav-cta">
+      <a href="reservations.html" class="btn btn-outline">Reserve a Table</a>
+      <a href="https://www.toasttab.com/east-end-pizza-company-1700-water-street" target="_blank" rel="noopener" class="btn btn-primary">Order Online</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<section class="page-hero">
+  <div class="container">
+    <span class="eyebrow">Join us by the river</span>
+    <h1>Reserve a Table</h1>
+    <p>Fill out the form below and we'll confirm your reservation by phone or email. For same-day requests or large parties (8+), please call us directly.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container reservation-wrap">
+    <div class="res-form">
+      <div class="form-status" id="formStatus"></div>
+
+      <form id="reservationForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="name">Full Name <span class="required">*</span></label>
+            <input type="text" id="name" name="name" required autocomplete="name">
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone Number <span class="required">*</span></label>
+            <input type="tel" id="phone" name="phone" required autocomplete="tel">
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="email">Email <span class="required">*</span></label>
+            <input type="email" id="email" name="email" required autocomplete="email">
+          </div>
+          <div class="form-group">
+            <label for="party_size">Party Size <span class="required">*</span></label>
+            <select id="party_size" name="party_size" required>
+              <option value="">Select&hellip;</option>
+              <option>1 guest</option>
+              <option>2 guests</option>
+              <option>3 guests</option>
+              <option>4 guests</option>
+              <option>5 guests</option>
+              <option>6 guests</option>
+              <option>7 guests</option>
+              <option>8+ guests (please call)</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="date">Preferred Date <span class="required">*</span></label>
+            <input type="date" id="date" name="date" required>
+          </div>
+          <div class="form-group">
+            <label for="time">Preferred Time <span class="required">*</span></label>
+            <input type="time" id="time" name="time" required>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="notes">Special Requests</label>
+          <textarea id="notes" name="notes" placeholder="Allergies, special occasion, seating preference, etc."></textarea>
+        </div>
+
+        <input type="hidden" name="_subject" value="New reservation request — East End Pizza Co.">
+        <input type="text" name="_gotcha" style="display:none">
+
+        <button type="submit" class="btn btn-primary btn-block" id="submitBtn">Request Reservation</button>
+        <p class="form-note">This sends a request to our team &mdash; it doesn't guarantee your table until we confirm by phone or email. We'll follow up as quickly as we can during business hours.</p>
+      </form>
+    </div>
+
+    <aside class="res-sidebar">
+      <div class="res-info-card">
+        <h3>Prefer to call?</h3>
+        <p>We're happy to book your table over the phone, especially for same-day or large-party reservations.</p>
+        <a href="tel:+18309555046" class="phone">(830) 955-5046</a>
+      </div>
+
+      <div class="res-info-card">
+        <h3>Hours</h3>
+        <table class="hours-table">
+          <tr><td>Mon &ndash; Thu</td><td>11am &ndash; 8pm</td></tr>
+          <tr><td>Fri &ndash; Sat</td><td>11am &ndash; 9pm</td></tr>
+          <tr><td>Sunday</td><td>11am &ndash; 8pm</td></tr>
+        </table>
+      </div>
+
+      <div class="res-info-card">
+        <h3>Find Us</h3>
+        <p>1700 Water St.<br>Kerrville, TX 78028</p>
+        <a href="https://maps.google.com/?q=1700+Water+St+Kerrville+TX+78028" target="_blank" rel="noopener" class="btn btn-outline btn-block">Get Directions</a>
+      </div>
+    </aside>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">
+          <img src="assets/img/logo.jpg" alt="East End Pizza Co. logo">
+          <span>East End Pizza Co.</span>
+        </div>
+        <p>Bricked, baked, and blessed by the Texas sun. Family owned and operated in Kerrville, TX.</p>
+        <a href="https://www.tiktok.com/@east.end.pizza.co" target="_blank" rel="noopener" class="footer-social">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M16.6 5.82s.51.5 0 0A4.278 4.278 0 0 1 15.54 3h-3.09v12.4a2.592 2.592 0 0 1-2.59 2.5c-1.42 0-2.6-1.16-2.6-2.6 0-1.72 1.66-3.01 3.37-2.48V9.66c-3.45-.46-6.47 2.22-6.47 5.64 0 3.33 2.76 5.7 5.69 5.7 3.14 0 5.69-2.55 5.69-5.7V9.01a7.35 7.35 0 0 0 4.3 1.38V7.3s-1.88.09-3.24-1.48Z"/></svg>
+          Follow on TikTok
+        </a>
+      </div>
+      <div>
+        <h5>Explore</h5>
+        <ul class="footer-links">
+          <li><a href="index.html#about">Our Story</a></li>
+          <li><a href="index.html#menu">Menu Highlights</a></li>
+          <li><a href="index.html#reviews">Reviews</a></li>
+          <li><a href="reservations.html">Reservations</a></li>
+          <li><a href="https://www.toasttab.com/east-end-pizza-company-1700-water-street" target="_blank" rel="noopener">Order Online</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Contact</h5>
+        <ul class="footer-links">
+          <li>1700 Water St., Kerrville, TX 78028</li>
+          <li><a href="tel:+18309555046">(830) 955-5046</a></li>
+          <li><a href="mailto:kerrtxeastendpizzaco@gmail.com">kerrtxeastendpizzaco@gmail.com</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; <span id="year"></span> East End Pizza Co. All rights reserved.</span>
+      <span>Kerrville, Texas</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
