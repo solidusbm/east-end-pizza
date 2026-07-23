@@ -63,6 +63,24 @@ options:
 - **GitHub Pages** — push this folder to a repo and enable Pages in the repo
   settings.
 
+## Style/layout variants
+
+`styles/index.html` is a comparison hub for alternate designs of this same
+site — same pattern as the Wagon Wheel RV Park static-site variants: each
+variant lives in its own `styles/vN/` folder (`index.html` + `css/style.css`),
+listed as a card on the hub linking to it. Alternate takes on a variant's
+theme go in `styles/vNb/`, `styles/vNc/`, etc., nested under that variant's
+card as an "Alternates" row rather than as their own top-level card. All
+variants should share the same content (hours, menu highlights, reviews,
+address) — only layout, typography, and styling differ, so it stays a visual
+comparison rather than a content diff.
+
+No variants exist yet — this is just the empty hub shell, not linked from
+the main site's nav (`index.html`/`reservations.html`), since it's an
+internal design-review page rather than something customers should land on.
+It's still publicly reachable at `/styles/` once pushed, same as any other
+page in this repo.
+
 ## Editing content later
 
 - **Hours**: update both the table in `index.html` (`#hoursTable`) and the
