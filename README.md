@@ -59,6 +59,8 @@ options:
 - **Reviews**: `index.html`, the `.testimonial-grid` cards — pulled from
   real Google reviews as of July 2026. Swap in newer ones periodically.
 - **Photos**: drop new images into `assets/img/` and update the `src`
-  attributes. The hero and About section currently reuse the one kitchen
-  photo from the old site — more photos (food, interior, riverside seating)
+  attributes. The hero (`nick-making-pizza.jpg`) and About section
+  (`hero-making-pizza.jpg`) currently use the same underlying photo of
+  Nick stretching dough, saved under two filenames so they can be swapped
+  independently later — more photos (food, interior, riverside seating)
   would strengthen both sections.
