@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /styles/
+
+Sitemap: https://kerrtxeastendpizzaco.com/sitemap.xml

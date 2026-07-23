@@ -9,12 +9,15 @@ document.addEventListener('DOMContentLoaded', function () {
   var navToggle = document.getElementById('navToggle');
   var navLinks = document.getElementById('navLinks');
   if (navToggle && navLinks) {
+    navToggle.setAttribute('aria-expanded', 'false');
     navToggle.addEventListener('click', function () {
-      navLinks.classList.toggle('open');
+      var isOpen = navLinks.classList.toggle('open');
+      navToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
     });
     navLinks.querySelectorAll('a').forEach(function (link) {
       link.addEventListener('click', function () {
         navLinks.classList.remove('open');
+        navToggle.setAttribute('aria-expanded', 'false');
       });
     });
   }
