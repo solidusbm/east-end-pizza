@@ -18,6 +18,19 @@ Ordering and the full menu still go through Toast
 out to it rather than duplicating the menu, so prices/items always stay in
 sync with what Toast has.
 
+Each menu-highlight card on `index.html` links directly to that item's page
+on Toast's ordering site (`order.toasttab.com/.../item-<slug>_<id>`), not
+just the general menu — Toast assigns each item a stable URL, so clicking a
+card jumps a visitor straight to that pizza/sub ready to add to cart. If an
+item's name or price changes on Toast, re-open the menu, find the item, and
+copy its new URL/price into the matching card (the id in the URL changes
+if the item is ever deleted and recreated, not on a simple edit).
+
+Reviews (`.testimonial-grid`) link out to the real Google Business listing
+page (same URL as the "Read all our reviews on Google" link above the
+grid) since Google doesn't provide stable per-review permalinks without a
+paid Places API integration.
+
 ## Before this goes live: connect the reservation form
 
 The reservation form on `reservations.html` posts to
@@ -59,8 +72,7 @@ options:
 - **Reviews**: `index.html`, the `.testimonial-grid` cards — pulled from
   real Google reviews as of July 2026. Swap in newer ones periodically.
 - **Photos**: drop new images into `assets/img/` and update the `src`
-  attributes. The hero (`nick-making-pizza.jpg`) and About section
-  (`hero-making-pizza.jpg`) currently use the same underlying photo of
-  Nick stretching dough, saved under two filenames so they can be swapped
-  independently later — more photos (food, interior, riverside seating)
-  would strengthen both sections.
+  attributes. The hero (`dining-room.jpg`, a real photo from the Google
+  Business listing) and About section (`hero-making-pizza.jpg`, Nick
+  stretching dough) are currently different photos — more photos (food,
+  riverside seating) would strengthen both sections further.
