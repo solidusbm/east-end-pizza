@@ -37,25 +37,33 @@ paid Places API integration.
 
 ## Before this goes live: point the real domain here
 
-`CNAME` in the repo root already tells GitHub Pages to serve this site at
-`kerrtxeastendpizzaco.com` instead of `solidusbm.github.io/east-end-pizza`.
-That only takes effect once DNS for that domain points at GitHub Pages —
-that part has to happen wherever the domain is registered (likely
-Squarespace Domains, since the old site was built there):
+There is **deliberately no `CNAME` file in this repo yet**. Adding one
+tells GitHub Pages to redirect the `github.io` preview URL straight to
+`kerrtxeastendpizzaco.com` *immediately* — not after DNS is ready. Tested
+this directly: with the CNAME file in place, `solidusbm.github.io/east-end-pizza/`
+301-redirected to the real domain right away, which currently still points
+at the old Squarespace site (DNS hasn't been switched), so the redirect
+sent visitors backward to the old site instead of forward to the new one.
+Do these two steps together, not one before the other:
 
-1. Add these DNS records at the registrar:
+1. Add these DNS records at wherever the domain is registered (likely
+   Squarespace Domains, since the old site was built there):
    - Four `A` records for `@` pointing to `185.199.108.153`,
      `185.199.109.153`, `185.199.110.153`, `185.199.111.153`
    - A `CNAME` record for `www` pointing to `solidusbm.github.io`
-2. In the GitHub repo settings → Pages, confirm the custom domain shows as
-   verified and check "Enforce HTTPS" once it's available (GitHub issues a
-   free certificate automatically, usually within an hour of DNS updating).
+2. At the same time, add a `CNAME` file back to the repo root containing
+   just `kerrtxeastendpizzaco.com` (one line, no protocol/slashes), commit,
+   and push — then check GitHub repo settings → Pages to confirm the
+   custom domain verifies and turn on "Enforce HTTPS" once it's offered
+   (GitHub issues a free certificate automatically, usually within an hour).
 3. Update the website link on the Google Business Profile to the new
    domain once it's live, so Google Search and Maps point people to it
    instead of the old Squarespace site.
 
-Until DNS is updated, the site keeps working fine at the `github.io` URL —
-nothing breaks in the meantime.
+The JSON-LD, canonical tags, and Open Graph/Twitter tags in `index.html`
+and `reservations.html` already reference `kerrtxeastendpizzaco.com` —
+that's just metadata (doesn't redirect anything), left pointed at the
+intended final domain so nothing needs editing again once DNS is live.
 
 ## SEO & social sharing
 
