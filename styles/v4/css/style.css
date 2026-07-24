@@ -1,0 +1,79 @@
+/* East End Pizza — Style Variant: Elegant Trattoria */
+@import url("../../../v1/css/style.css");
+
+:root {
+  --red: #6e1423;
+  --red-dark: #4f0e19;
+  --green: #2c2c2c;
+  --green-dark: #1c1c1c;
+  --cream: #f4ede1;
+  --cream-soft: #faf6ee;
+  --gold: #b48a3f;
+  --ink: #211c17;
+  --ink-soft: #5c554b;
+  --white: #ffffff;
+
+  --font-display: 'Playfair Display', serif;
+  --font-script: 'Cormorant Garamond', serif;
+  --font-body: 'Cormorant Garamond', serif;
+
+  --radius: 3px;
+  --shadow: 0 10px 24px -12px rgba(33, 28, 23, 0.3);
+}
+
+body { font-size: 1.08rem; }
+
+h1, h2, h3, h4 { font-weight: 600; letter-spacing: 0.005em; }
+
+.eyebrow {
+  font-style: italic;
+  font-weight: 500;
+  font-size: 1.4rem;
+  color: var(--gold);
+}
+
+.section-head h2::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 1px;
+  background: var(--gold);
+  margin: 18px auto 0;
+}
+
+.site-header { background: var(--white); border-bottom: 1px solid var(--gold); }
+.brand-text { color: var(--red); }
+
+.btn {
+  border-radius: var(--radius);
+  font-family: var(--font-body);
+  font-style: italic;
+  letter-spacing: 0.02em;
+}
+.btn-primary { background: var(--red); box-shadow: none; }
+.btn-primary:hover { background: var(--red-dark); }
+.btn-outline { border-color: var(--gold); color: var(--red); }
+.btn-outline:hover { background: var(--gold); color: var(--white); }
+
+.hero::before { background: linear-gradient(180deg, rgba(33,28,23,0.45) 0%, rgba(33,28,23,0.6) 55%, rgba(33,28,23,0.88) 100%); }
+.hero-content h1 { font-style: normal; }
+.hero-badge { border-radius: var(--radius); border-color: var(--gold); }
+
+.section-alt { background: var(--cream); }
+
+.menu-card, .testimonial-card {
+  border-radius: var(--radius);
+  border: 1px solid rgba(180,138,63,0.35);
+  box-shadow: none;
+}
+.menu-card:hover, .testimonial-card:hover { box-shadow: var(--shadow); transform: none; border-color: var(--gold); }
+.menu-card .tag { background: transparent; border: 1px solid var(--gold); color: var(--gold); border-radius: var(--radius); }
+.menu-card h3 { font-style: normal; }
+
+.reserve-band, .catering-band { background: var(--ink); }
+.reserve-band .eyebrow, .catering-band .eyebrow { color: var(--gold); }
+
+.faq-item { border-radius: var(--radius); border: 1px solid rgba(180,138,63,0.35); }
+.faq-item summary { font-family: var(--font-display); font-style: normal; }
+
+.footer-social, .tiktok-callout { border-radius: var(--radius); }

@@ -1,0 +1,73 @@
+/* East End Pizza — Style Variant: Bold & Vibrant */
+@import url("../../../v1/css/style.css");
+
+:root {
+  --red: #ff3d1a;
+  --red-dark: #d92c0d;
+  --green: #1a1a1a;
+  --green-dark: #000000;
+  --cream: #fff4e0;
+  --cream-soft: #fffaf0;
+  --gold: #ffc93c;
+  --ink: #111111;
+  --ink-soft: #333333;
+  --white: #ffffff;
+
+  --font-display: 'Bebas Neue', sans-serif;
+  --font-script: 'Space Grotesk', sans-serif;
+  --font-body: 'Space Grotesk', sans-serif;
+
+  --radius: 999px;
+  --shadow: 6px 6px 0 var(--ink);
+}
+
+body { background: var(--white); }
+
+h1, h2, h3, h4 { letter-spacing: 0.01em; text-transform: uppercase; }
+
+.eyebrow {
+  font-family: var(--font-script);
+  font-weight: 700;
+  font-size: 0.85rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--red);
+}
+
+.site-header { background: var(--gold); border-bottom: 4px solid var(--ink); backdrop-filter: none; }
+.brand-text, .nav-links a:not(.btn) { color: var(--ink); }
+.brand-text span { color: var(--red); }
+
+.btn {
+  border-radius: var(--radius);
+  border: 3px solid var(--ink);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+.btn-primary { background: var(--red); color: var(--white); box-shadow: var(--shadow); }
+.btn-primary:hover { transform: translate(-2px, -2px); box-shadow: 8px 8px 0 var(--ink); background: var(--red); }
+.btn-secondary { border-color: var(--white); }
+.btn-outline { border-color: var(--ink); color: var(--ink); }
+.btn-outline:hover { background: var(--ink); color: var(--white); }
+
+.hero::before { background: linear-gradient(180deg, rgba(17,17,17,0.35) 0%, rgba(17,17,17,0.55) 55%, rgba(17,17,17,0.85) 100%); }
+.hero-badge { border-radius: var(--radius); background: var(--gold); color: var(--ink); border-color: var(--ink); }
+.hero-content h1 { -webkit-text-stroke: 0; }
+
+.section-alt { background: var(--cream); }
+
+.menu-card, .testimonial-card {
+  border: 3px solid var(--ink);
+  border-radius: 18px;
+  box-shadow: var(--shadow);
+}
+.menu-card:hover, .testimonial-card:hover { transform: translate(-3px, -3px); box-shadow: 9px 9px 0 var(--ink); }
+.menu-card .tag { background: var(--gold); color: var(--ink); border-radius: var(--radius); font-weight: 700; }
+
+.reserve-band, .catering-band { background: var(--red); }
+.reserve-band .eyebrow, .catering-band .eyebrow { color: var(--gold); }
+
+.faq-item { border: 3px solid var(--ink); border-radius: 18px; }
+
+.footer-social, .tiktok-callout { border-radius: var(--radius); }

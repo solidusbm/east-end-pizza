@@ -1,0 +1,79 @@
+/* East End Pizza — Style Variant: Modern Minimalist */
+@import url("../../../v1/css/style.css");
+
+:root {
+  --red: #c9502f;
+  --red-dark: #a13f25;
+  --green: #2a2a28;
+  --green-dark: #1a1a18;
+  --cream: #f4f2ee;
+  --cream-soft: #fbfaf8;
+  --gold: #2a2a28;
+  --ink: #1a1a18;
+  --ink-soft: #5c5850;
+  --white: #ffffff;
+
+  --font-display: 'Space Grotesk', sans-serif;
+  --font-script: 'Inter', sans-serif;
+  --font-body: 'Inter', sans-serif;
+
+  --radius: 2px;
+  --shadow: none;
+}
+
+body { background: var(--white); }
+
+h1, h2, h3, h4 { font-weight: 600; letter-spacing: -0.02em; color: var(--ink); }
+
+.eyebrow {
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--red);
+}
+
+.site-header {
+  background: var(--white);
+  backdrop-filter: none;
+  border-bottom: 1px solid rgba(26,26,24,0.1);
+}
+
+.brand img { border-radius: 0; }
+.brand-text { color: var(--ink); }
+.brand-text span { color: var(--ink-soft); }
+
+.btn {
+  border-radius: var(--radius);
+  border-width: 1.5px;
+  box-shadow: none !important;
+  letter-spacing: 0.02em;
+}
+.btn:hover { transform: none; }
+.btn-primary { background: var(--ink); color: var(--white); }
+.btn-primary:hover { background: var(--red); }
+.btn-outline { border-color: var(--ink); color: var(--ink); }
+.btn-outline:hover { background: var(--ink); color: var(--white); }
+
+.hero::before {
+  background: linear-gradient(180deg, rgba(20,20,18,0.35) 0%, rgba(20,20,18,0.55) 60%, rgba(20,20,18,0.8) 100%);
+}
+.hero-badge { border-radius: var(--radius); background: rgba(255,255,255,0.08); }
+
+.section-alt { background: var(--cream); }
+
+.menu-card, .testimonial-card {
+  border-radius: var(--radius);
+  border: 1px solid rgba(26,26,24,0.12);
+  box-shadow: none;
+}
+.menu-card:hover, .testimonial-card:hover { box-shadow: none; border-color: var(--ink); transform: none; }
+.menu-card .tag { border-radius: var(--radius); }
+
+.reserve-band, .catering-band { background: var(--ink); }
+
+.faq-item { border-radius: var(--radius); }
+
+.hours-table td:first-child { font-weight: 600; }
+
+.nav-toggle span { border-radius: 0; }
