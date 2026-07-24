@@ -1,0 +1,121 @@
+:root {
+  --ink: #2a231c;
+  --red: #8c2b2f;
+  --red-dark: #6e2124;
+  --green: #4f5c40;
+  --cream: #f4ecd2;
+  --cream-2: #fffdf7;
+  --tan: #e0d3ac;
+  --muted: #5a5044;
+  --font: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-head: "Fraunces", serif;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: var(--font);
+  background: var(--cream);
+  color: var(--ink);
+  line-height: 1.5;
+}
+
+.hub-header {
+  background: var(--ink);
+  padding: 28px 24px;
+}
+
+.hub-header .brand {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.hub-header img { height: 44px; width: 44px; border-radius: 50%; object-fit: cover; }
+
+.hub-header .brand-text { color: var(--tan); font-family: var(--font-head); }
+.hub-header .brand-text strong { display: block; font-size: 1.05rem; color: #fff; }
+.hub-header .brand-text span { display: block; font-size: 0.8rem; font-family: var(--font); }
+
+main {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 56px 24px 80px;
+}
+
+main > p.intro {
+  color: var(--muted);
+  max-width: 620px;
+  margin-bottom: 48px;
+  font-size: 1.05rem;
+}
+
+.hub-section { margin-bottom: 48px; }
+
+.hub-section h2 {
+  font-family: var(--font-head);
+  font-size: 1.3rem;
+  margin-bottom: 6px;
+}
+
+.hub-section .section-note {
+  color: var(--muted);
+  font-size: 0.95rem;
+  margin-bottom: 20px;
+}
+
+.hub-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 18px;
+}
+
+.hub-card {
+  display: block;
+  background: var(--cream-2);
+  border: 1px solid var(--tan);
+  border-radius: 10px;
+  padding: 20px;
+  text-decoration: none;
+  color: var(--ink);
+  transition: border-color 0.15s, transform 0.15s;
+}
+
+.hub-card:hover {
+  border-color: var(--red);
+  transform: translateY(-2px);
+}
+
+.hub-card .tag {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--red);
+  background: var(--cream);
+  border-radius: 999px;
+  padding: 3px 10px;
+  margin-bottom: 10px;
+}
+
+.hub-card h3 { font-family: var(--font-head); font-size: 1.1rem; margin-bottom: 6px; }
+.hub-card p { color: var(--muted); font-size: 0.9rem; }
+.hub-card .go { display: inline-block; margin-top: 12px; font-size: 0.85rem; color: var(--red); font-weight: 600; }
+
+.hub-card.empty {
+  border-style: dashed;
+  color: var(--muted);
+}
+.hub-card.empty:hover { transform: none; border-color: var(--tan); }
+
+.back-link {
+  display: inline-block;
+  margin-bottom: 28px;
+  color: var(--muted);
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+.back-link:hover { color: var(--ink); }

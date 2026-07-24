@@ -1,61 +1,37 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>East End Pizza Co. — Style Comparison</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>East End Pizza Co. — Styles &amp; Fixes</title>
 <meta name="robots" content="noindex, nofollow">
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,600;0,700;1,500&family=Caveat:wght@600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
-<style>
-  :root{ --bg:#f4ecd2; --panel:#fffdf7; --line:#e0d3ac; --red:#8c2b2f; --green:#4f5c40; --gold:#d9a441; --ink:#2a231c; --dim:#5a5044; --radius:6px; }
-  *{box-sizing:border-box;}
-  body{margin:0; background:var(--bg); color:var(--ink); font-family:'Inter', sans-serif; min-height:100vh;}
-  .wrap{max-width:1080px; margin:0 auto; padding:64px 24px;}
-  h1{font-family:'Fraunces', serif; font-weight:700; font-size:34px; margin:0 0 8px;}
-  .sub{color:var(--dim); font-family:'Caveat', cursive; font-size:20px; margin:0 0 40px;}
-  .variants{display:grid; grid-template-columns:1fr 1fr 1fr; gap:20px;}
-  @media(max-width:860px){.variants{grid-template-columns:1fr 1fr;}}
-  @media(max-width:560px){.variants{grid-template-columns:1fr;}}
-  .empty{
-    background:var(--panel); border:1px dashed var(--line); border-radius:var(--radius);
-    padding:40px; text-align:center; color:var(--dim); font-size:14px; line-height:1.7;
-  }
-  .empty strong{color:var(--ink); font-family:'Fraunces', serif; font-weight:600; display:block; font-size:17px; margin-bottom:8px;}
-  .card{
-    display:block; background:var(--panel); border:1px solid var(--line); border-radius:var(--radius);
-    padding:24px; transition:border-color 0.15s;
-  }
-  .card:hover{border-color:var(--gold);}
-  .card-link{display:block; text-decoration:none; color:inherit;}
-  .card .tag{font-family:'Inter',monospace; font-size:11px; text-transform:uppercase; letter-spacing:0.08em; color:var(--red); margin-bottom:8px; font-weight:600;}
-  .card h2{font-size:20px; margin:0 0 8px; font-family:'Fraunces',serif; font-weight:600;}
-  .card p{margin:0; font-size:13.5px; color:var(--dim); line-height:1.6;}
-  .swatch-row{display:flex; gap:6px; margin-top:16px;}
-  .swatch{width:20px; height:20px; border-radius:50%; border:1px solid rgba(0,0,0,0.1);}
-  .alts{display:flex; align-items:center; gap:8px; margin-top:16px; padding-top:16px; border-top:1px solid var(--line); flex-wrap:wrap;}
-  .alts .alts-label{font-size:10px; text-transform:uppercase; letter-spacing:0.06em; color:var(--dim); margin-right:2px;}
-  .alt-chip{font-size:11px; text-transform:uppercase; letter-spacing:0.04em; color:var(--dim); background:var(--bg); border:1px solid var(--line); border-radius:100px; padding:5px 11px; text-decoration:none;}
-  .alt-chip:hover{color:var(--red); border-color:var(--red);}
-  footer{margin-top:48px; font-size:12px; color:var(--dim);}
-  footer a{color:var(--red);}
-</style>
+<link rel="stylesheet" href="../css/hub.css">
 </head>
 <body>
-<div class="wrap">
-  <h1>East End Pizza Co.</h1>
-  <p class="sub">Style/layout variants of the site, kept live side by side for comparison.</p>
 
-  <div class="variants">
-    <div class="empty">
-      <strong>No variants yet</strong>
-      Structure is set up, nothing built. When a variant is ready, add a
-      <code>vN/</code> folder (own <code>index.html</code> + <code>css/style.css</code>)
-      and a card here linking to it — same pattern as the Wagon Wheel comparison hub.
-      Alternate takes on a variant go in <code>vNb/</code>, <code>vNc/</code>, etc.
+<header class="hub-header">
+  <div class="brand">
+    <img src="../v1/assets/img/logo.jpg" alt="East End Pizza Co.">
+    <div class="brand-text">
+      <strong>East End Pizza Co.</strong>
+      <span>Styles &amp; fixes</span>
     </div>
   </div>
+</header>
 
-  <footer>Not linked from the main site nav — internal design-review page only. See <a href="../README.md">README</a> for the site itself.</footer>
-</div>
+<main>
+  <a class="back-link" href="../">&larr; Back to all versions</a>
+  <section class="hub-section">
+    <h2>Style examples &amp; fixes</h2>
+    <p class="section-note">Visual variants and one-off style experiments will show up here as they're added.</p>
+    <div class="hub-grid">
+      <div class="hub-card empty">
+        <h3>No variants yet</h3>
+        <p>When a variant is ready, add a <code>vN/</code> folder (own <code>index.html</code> + <code>css/style.css</code>) and a card here. Alternate takes on a variant go in <code>vNb/</code>, <code>vNc/</code>, etc.</p>
+      </div>
+    </div>
+  </section>
+</main>
+
 </body>
 </html>
